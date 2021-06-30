@@ -1,0 +1,60 @@
+[package]
+authors = ["Evan.Stoll <evanjsx@gmail.com>"]
+edition = "2018"
+name = "test"
+version = "1.0.0"
+
+
+[dependencies]
+actix = "0.12.0"
+actix-cors = "0.6.0-beta.2"
+actix-http = "3.0.0-beta.7"
+actix-rt = "2.2.0"
+actix-web = "4.0.0-beta.8"
+actix-web-actors = "4.0.0-beta.5"
+anyhow = "1.0.41"
+as-slice = { version = "0.2.1", optional = true }
+awc = "3.0.0-beta.6"
+cfg-if = "1.0.0"
+chrono = { version = "0.4.19", features = ["serde"] }
+crossbeam = "0.8.1"
+crossbeam-channel = "0.5.1"
+crossbeam-utils = "0.8.5"
+dbus = "0.9.3"
+dotenv = "0.15.0"
+either = "1.6.1"
+envy = "0.4.2"
+futures = "0.3.15"
+futures-retry = "0.6.0"
+inotify = "0.9.3"
+libc = "0.2.97"
+num = "0.4.0"
+page_size = "0.4.2"
+palaver = { version = "0.2.8", default-features = false }
+pnet = { version = "0.28.0", features = [ "serde" ] }
+prettytable-rs = "0.8.0"
+rand = "0.8.4"
+retry = "1.2.1"
+serde = "1.0.126"
+serde_derive = "1.0.126"
+serde_json = "1.0.64"
+shared_memory = "0.11.4"
+size = "0.1.2"
+sqlx = { version = "0.5.5", features = ["runtime-actix-native-tls", "postgres", "json", "uuid", "macros", "offline"] }
+sysconf = "0.3.4"
+sysinfo = "0.18.2"
+time = "0.2.27"
+tracing-futures = "0.2.5"
+tracing-subscriber = "0.2.18"
+tracing = { version = "0.1.26", features = [ "log" ] }
+uuid = { version = "0.8.2", features = ["serde"] }
+zip = "0.5.13"
+
+
+[profile.release]
+lto = "thin"
+
+[build-dependencies]
+bindgen = "0.58.1"
+cfg-if = "1.0.0"
+dbus-codegen = "0.9.1"
